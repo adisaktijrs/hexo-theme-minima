@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h4 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌚</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌝</div>
+    </h4>
+  </div>
+
+  <div class="six columns ml-1" style="max-width: 200px">
+    <h4 class="mt-2">
+      <%= theme.title %>
+    </h4>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="<%= config.root %>" class="link">Home</a>
+        <% for (name in theme.menu) { %>
+          <a href="<%- url_for(theme.menu[name]) %>" class="ml link"><%- name %></a>
+        <% } %>
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+<script >
+
+  if (localStorage.getItem('preferredTheme') == 'dark') {
+    setDarkMode(true)
+  }
+
+  function setDarkMode(isDark) {
+    var darkBtn = document.getElementById('darkBtn')
+    var lightBtn = document.getElementById('lightBtn')
+    if (isDark) {
+      lightBtn.style.display = "block"
+      darkBtn.style.display = "none"
+      localStorage.setItem('preferredTheme', 'dark');
+    } else {
+      lightBtn.style.display = "none"
+      darkBtn.style.display = "block"
+      localStorage.removeItem('preferredTheme');
+    }
+    document.body.classList.toggle("darkmode");
+
+  }
+</script>

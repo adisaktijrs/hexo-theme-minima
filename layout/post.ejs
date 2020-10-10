@@ -1,0 +1,5 @@
+  <h4><%- page.title %></h4>
+
+  <%- page.content%>
+  <p><%- list_tags(page.tags, {class: 'classtest', show_count: false, style: false}) %> — <%- full_date(page.date, 'll') %></p>
+  <%- partial('partial/comments') %>

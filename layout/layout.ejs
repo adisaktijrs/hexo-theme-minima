@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  <%
+  if (!config.author) {
+    config.author = ""
+  }
+
+  var title = title = config.title;
+  if (is_archive()){
+    title = 'All Posts - ' + config.author;
+  } else if (is_post()){
+    title = page.title;
+  } else if (is_page()){
+    title = page.title + ' - ' + config.author;
+  } else if (is_tag()){
+    title = 'Posts Related to ' + page.tag;
+  }
+  %>
+  <title><%= title %></title>
+
+  <% if (is_page()){ %>
+  <meta name="description" content="<%= page.description %>">
+  <% } else if (page.content){ %>
+  <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <% } else { %>
+  <meta name="description" content="<%= config.description %>">
+  <% } %>
+
+  <meta name="author" content="<%- config.author %>">
+
+  <% if (is_post()) { %>
+  <meta property="og:image" content="<%-config.url + "/" + page.path + page.thumbnail %>">
+  <% } %>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <%- css('css/normalize.css') %>
+  <%- css('css/skeleton.css') %>
+  <%- css('css/custom.css') %>
+  <%- css('css/prism-dark.css') %>
+  <%- css('css/prism-line-numbers.css') %>
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="<%- theme.favicon %>">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="eight columns  offset-by-two">
+
+        <%- partial('partial/header') %>
+        <div class="trans">
+          <%- body %>
+          <%- partial('partial/footer') %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="<%- config.root + theme.nanobar %>"></script>
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
