@@ -483,11 +483,13 @@ label>.label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside;
+  list-style: circle outside;
+  margin-left: 2rem;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
+  margin-left: 2rem;
 }
 
 ol, ul {
