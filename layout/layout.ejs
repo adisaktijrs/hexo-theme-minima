@@ -17,13 +17,13 @@
 
   var title = title = config.title;
   if (is_archive()){
-    title = 'All Posts - ' + config.author;
+    title = 'Semua Tulisan - ' + config.author;
   } else if (is_post()){
     title = page.title;
   } else if (is_page()){
     title = page.title + ' - ' + config.author;
   } else if (is_tag()){
-    title = 'Posts Related to ' + page.tag;
+    title = 'Tulisan Tentang ' + page.tag;
   }
   %>
   <title><%= title %></title>
@@ -41,6 +41,33 @@
   <% if (is_post()) { %>
   <meta property="og:image" content="<%-config.url + "/" + page.path + page.thumbnail %>">
   <% } %>
+
+  <meta property="og:site_name" content="<%= config.title %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="<%= title %>" />
+  <% if (is_page()){ %>
+  <meta property="og:description" content="<%= page.description %>">
+  <% } else if (page.content){ %>
+  <meta property="og:description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <% } else { %>
+  <meta property="og:description" content="<%= config.description %>">
+  <% } %>
+  <meta property="og:url" content="<%= url %>" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title %>">
+  <% if (is_page()){ %>
+  <meta name="twitter:description" content="<%= page.description %>">
+  <% } else if (page.content){ %>
+  <meta name="twitter:description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <% } else { %>
+  <meta name="twitter:description" content="<%= config.description %>">
+  <% } %>
+
+  <% if (is_post()) { %>
+  <meta name="twitter:image" content="<%-config.url + "/" + page.path + page.thumbnail %>">
+  <% } %>
+  <meta name="twitter:url" content="<%= url %>" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
