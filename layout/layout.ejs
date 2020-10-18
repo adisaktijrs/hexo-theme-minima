@@ -31,7 +31,7 @@
   <% if (is_page()){ %>
   <meta name="description" content="<%= page.description %>">
   <% } else if (page.content){ %>
-  <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <meta name="description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } else { %>
   <meta name="description" content="<%= config.description %>">
   <% } %>
@@ -48,7 +48,7 @@
   <% if (is_page()){ %>
   <meta property="og:description" content="<%= page.description %>">
   <% } else if (page.content){ %>
-  <meta property="og:description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <meta property="og:description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } else { %>
   <meta property="og:description" content="<%= config.description %>">
   <% } %>
@@ -59,7 +59,7 @@
   <% if (is_page()){ %>
   <meta name="twitter:description" content="<%= page.description %>">
   <% } else if (page.content){ %>
-  <meta name="twitter:description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <meta name="twitter:description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
   <% } else { %>
   <meta name="twitter:description" content="<%= config.description %>">
   <% } %>
