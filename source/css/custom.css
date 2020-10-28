@@ -125,7 +125,6 @@ blockquote footer cite:before {
   background: #0FA0CE;
 }
 
-/* Dark mode */
 body {
   transition: all 0.3s ease-in-out;
 }
@@ -145,11 +144,6 @@ body {
     opacity: 1;
     transform: none;
   }
-}
-
-body.darkmode {
-  background: rgb(34, 34, 38);
-  color: rgb(256, 256, 256);
 }
 
 .hidden {

@@ -3,6 +3,25 @@
     <h4 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn">🌚</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌝</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
     </h4>
   </div>
 
@@ -24,26 +43,3 @@
     <hr style="margin-bottom: 2.6rem">
   </div>
 </div>
-
-<script >
-
-  if (localStorage.getItem('preferredTheme') == 'dark') {
-    setDarkMode(true)
-  }
-
-  function setDarkMode(isDark) {
-    var darkBtn = document.getElementById('darkBtn')
-    var lightBtn = document.getElementById('lightBtn')
-    if (isDark) {
-      lightBtn.style.display = "block"
-      darkBtn.style.display = "none"
-      localStorage.setItem('preferredTheme', 'dark');
-    } else {
-      lightBtn.style.display = "none"
-      darkBtn.style.display = "block"
-      localStorage.removeItem('preferredTheme');
-    }
-    document.body.classList.toggle("darkmode");
-
-  }
-</script>
