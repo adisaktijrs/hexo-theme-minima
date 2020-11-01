@@ -17,13 +17,16 @@ menu:
 max_post: 4
 
 # social profile at the footer/bottom
-place: https://www.google.com/search?q=kendal+jawa+tengah
-github: https://github.com/adisaktijrs
-instagram: https://www.instagram.com/adisaktijrs/
-twitter: https://twitter.com/adisaktijrs
+footer: true
+place: 
+github: 
+instagram: 
+twitter: 
 
-# js
+# Misc
 nanobar: /js/nanobar.min.js
+switch_light: ☀️
+switch_dard: 🌕
 
 # favicon
 favicon: /images/favicon.png
@@ -32,5 +35,5 @@ article:
   thumbnail: true
 
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
-disqus_enabled: true
+disqus_enabled: false
 disqus_shortname: https-adisaktijrs-github-io
