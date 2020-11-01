@@ -117,8 +117,38 @@ blockquote footer cite:before {
   padding: 0 0.5em;
 }
 
+/* Footer */
+a.footer-link {
+  all: initial;
+}
 
+a.footer-link:hover,
+a.footer-link:focus {
+  cursor: pointer;
+}
 
+.svg-hov {
+  transition: all .2s ease-in-out;
+}
+.svg-hov:hover {
+  transform: translateY(-3px);
+  transition: all .2s ease-in-out;
+
+}
+
+.github, .twitter, .instagram {
+  width: 20px;
+}
+
+.github {
+  fill: #63636F;
+}
+.twitter {
+  fill: #1DA1F2;
+}
+.instagram {
+  fill: #E4405F
+}
 
 /* Nanobar */
 .nanobar .bar {
