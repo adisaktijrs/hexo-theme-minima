@@ -1,39 +1,47 @@
-#title in header
-title: "Hi Folks."
+# Title in header
+title: "雪、無音、窓辺にて。"
 
-#main info
-#owner
-owner: "I am Adi Sakti Jrs"
-info: "A student and web developer from Indonesia 🇮🇩"
-#description
-desc: "This is Minima, an undoubtedly simple and lightweight dark/light mode theme for Hexo. I created this from scratch using Skeleton CSS boilerplate. It only uses CSS and Vanilla JS, without using unnecessary third-party 'render-blocking' libraries! 😁"
+# INFO
+# Owner info
+owner: ""
+info: "暖かい日差しを受けて　桃色の花びらが　飛び"
+# Description, will be displayed at second line
+desc: "舞い散る雪の季節がまた　終わりを告げる　妖精よ　ふらふらり　現れてくる"
 
-#menu
+# Main page top menu bar
 menu:
-  Works: /Works
-  About: /About
+  Archives: /archives
+  Playground: ../play
+  Links: /external
+  PGP Key: https://pgp.yukimuon.com
+  .ME: /about
 
-#index/main page max show posts (in number)
+# Index/main page max show posts (in number)
 max_post: 4
 
-# social profile at the footer/bottom
-footer: true
+# Colors for links and top nanobar, use hex color without #
+tcolor: ff6f61
+ncolor: ffb7c5
+
+# Social profile at the footer/bottom, default close
+profile: false
 place: 
 github: 
 instagram: 
 twitter: 
+date: false
 
 # Misc
 nanobar: /js/nanobar.min.js
 switch_light: ☀️
 switch_dard: 🌕
 
-# favicon
+# Favicon
 favicon: /images/favicon.png
 
 article:
-  thumbnail: true
+  thumbnail: false
 
-# DISQUS comments (sign up to Disqus to get disqus_shortname)
+# DISQUS comments (sign up to Disqus to get disqus_shortname). default close
 disqus_enabled: false
-disqus_shortname: https-adisaktijrs-github-io
+disqus_shortname:
