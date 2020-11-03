@@ -1,5 +1,4 @@
 # Title in header
-<<<<<<< HEAD
 title: "雪、無音、窓辺にて。"
 
 # INFO
@@ -8,40 +7,21 @@ owner: ""
 info: "暖かい日差しを受けて　桃色の花びらが　飛び"
 # Description, will be displayed at second line
 desc: "舞い散る雪の季節がまた　終わりを告げる　妖精よ　ふらふらり　現れてくる"
-=======
-title: "Hello! This is Hexo theme Minima!"
-
-# INFO
-# Owner info
-owner: "I am Adi Sakti Jrs!"
-info: "A student and web developer from Indonesia 🇮🇩"
-# Description, will be displayed at second line
-desc: "This is Minima, a great minimal style theme for Hexo!"
->>>>>>> 64d9df955bb98bece9c383f3724b2280dcc164fd
 
 # Main page top menu bar
 menu:
   Archives: /archives
-<<<<<<< HEAD
   Playground: ../play
   Links: /external
   PGP Key: https://pgp.yukimuon.com
   .ME: /about
-=======
-  About: /about
->>>>>>> 64d9df955bb98bece9c383f3724b2280dcc164fd
 
 # Index/main page max show posts (in number)
 max_post: 4
 
 # Colors for links and top nanobar, use hex color without #
-<<<<<<< HEAD
 tcolor: ff6f61
 ncolor: ffb7c5
-=======
-tcolor: 0FA0CE
-ncolor: FF5869
->>>>>>> 64d9df955bb98bece9c383f3724b2280dcc164fd
 
 # Social profile at the footer/bottom, default close
 profile: false
