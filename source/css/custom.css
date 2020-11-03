@@ -96,14 +96,6 @@ img {
 }
 
 /* blockquote */
-blockquote {
-  font-family: 'Inter';
-  background-color: rgba(148, 148, 149, 0.08) ;
-  border-left: 8px solid #0FA0CE;
-  margin: 1.5em 0px;
-  padding: 1.1em 20px 1px 20px;
-  font-style: italic;
-}
 
 blockquote footer {
   font-family: 'Inter';
@@ -151,9 +143,7 @@ a.footer-link:focus {
 }
 
 /* Nanobar */
-.nanobar .bar {
-  background: #0FA0CE;
-}
+
 
 body {
   transition: all 0.3s ease-in-out;

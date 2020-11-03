@@ -24,6 +24,31 @@
       </script>
     </h4>
   </div>
+  <style>
+
+  a {
+    color: inherit;
+    text-decoration-color:  #<%= theme.tcolor %>;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.0) 50%, #<%= theme.tcolor %> 50%);
+    transition:
+      background-position .2s ease-in-out,
+      color .2s ease-in-out;
+  }
+
+  .nanobar .bar {
+    background: #<%= theme.ncolor %>;
+  }
+
+  blockquote {
+    font-family: 'Inter';
+    background-color: rgba(148, 148, 149, 0.08) ;
+    border-left: 8px solid #<%= theme.ncolor %>;
+    margin: 1.5em 0px;
+    padding: 1.1em 20px 1px 20px;
+    font-style: italic;
+  }
+  </style>
 
   <div class="six columns ml-1" style="max-width: 200px">
     <h4 class="mt-2">
