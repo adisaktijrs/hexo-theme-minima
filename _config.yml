@@ -1,22 +1,26 @@
-#title in header
-title: "Hi Folks."
+# Title in header
+title: "Hexo theme Minima!"
 
-#main info
-#owner
-owner: "I am Adi Sakti Jrs"
+# INFO
+# Owner info
+owner: "I am Adi Sakti Jrs!"
 info: "A student and web developer from Indonesia 🇮🇩"
-#description
-desc: "This is Minima, an undoubtedly simple and lightweight dark/light mode theme for Hexo. I created this from scratch using Skeleton CSS boilerplate. It only uses CSS and Vanilla JS, without using unnecessary third-party 'render-blocking' libraries! 😁"
+# Description, will be displayed at second line
+desc: "This is Minima, a great minimal style theme for Hexo!"
 
-#menu
+# Main page top menu bar
 menu:
-  Works: /Works
-  About: /About
+  Archives: /archives
+  About: /about
 
-#index/main page max show posts (in number)
+# Index/main page max show posts (in number)
 max_post: 4
 
-# social profile at the footer/bottom
+# Colors for links and top nanobar, use hex color without #
+tcolor: 0FA0CE
+ncolor: FF5869
+
+# Social profile at the footer/bottom, default close
 footer: true
 place: 
 github: 
@@ -28,12 +32,12 @@ nanobar: /js/nanobar.min.js
 switch_light: ☀️
 switch_dard: 🌕
 
-# favicon
+# Favicon
 favicon: /images/favicon.png
 
 article:
   thumbnail: true
 
-# DISQUS comments (sign up to Disqus to get disqus_shortname)
+# DISQUS comments (sign up to Disqus to get disqus_shortname). default close
 disqus_enabled: false
 disqus_shortname: https-adisaktijrs-github-io
