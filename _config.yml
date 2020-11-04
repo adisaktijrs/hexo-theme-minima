@@ -18,7 +18,8 @@ max_post: 4
 
 # social profile at the footer/bottom
 footer: true
-place: 
+placename: 
+placelink: 
 github: 
 instagram: 
 twitter: 

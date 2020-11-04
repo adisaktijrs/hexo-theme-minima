@@ -117,6 +117,26 @@ blockquote footer cite:before {
   padding: 0 0.5em;
 }
 
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: rgb(128 128 128 / 80%);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgb(128 128 128 / 20%);
+}
+
 /* Footer */
 a.footer-link {
   all: initial;
