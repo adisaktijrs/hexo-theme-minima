@@ -31,6 +31,8 @@ switch_dard: 🌕
 
 # favicon
 favicon: /images/favicon.png
+# thumbnail
+thumbnail: /images/thumbnail.jpg
 
 article:
   thumbnail: true
