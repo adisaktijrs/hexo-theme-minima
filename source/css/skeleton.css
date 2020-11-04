@@ -27,7 +27,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -40,20 +40,8 @@
   box-sizing: border-box;
 }
 
-/* For devices larger than 400px */
-@media (min-width: 400px) {
-  .container {
-    width: 85%;
-    padding: 0;
-  }
-}
-
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-  .container {
-    width: 80%;
-  }
-
   .column,
   .columns {
     margin-left: 4%;
@@ -308,8 +296,8 @@ a:focus {
   background-color: #0FA0CE;
   transition: to top 200ms ease-out;
 
-} */
-/*
+}
+
 .link {
   text-decoration: none;
   color: inherit;
