@@ -99,7 +99,6 @@ img {
 blockquote {
   font-family: 'Inter';
   background-color: rgba(148, 148, 149, 0.08) ;
-  border-left: 8px solid #0FA0CE;
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
   font-style: italic;
@@ -138,10 +137,6 @@ blockquote footer cite:before {
 }
 
 /* Footer */
-a.footer-link {
-  all: initial;
-}
-
 a.footer-link:hover,
 a.footer-link:focus {
   cursor: pointer;
@@ -156,23 +151,21 @@ a.footer-link:focus {
 
 }
 
-.github, .twitter, .instagram {
-  width: 20px;
+.github, .linkedin, .twitter, .instagram {
+  width: 18px;
 }
 
 .github {
   fill: #63636F;
+}
+.linkedin {
+  fill: #0073b1;
 }
 .twitter {
   fill: #1DA1F2;
 }
 .instagram {
   fill: #E4405F
-}
-
-/* Nanobar */
-.nanobar .bar {
-  background: #0FA0CE;
 }
 
 body {

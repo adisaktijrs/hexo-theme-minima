@@ -1,6 +1,6 @@
 <div class="row">
   <div class="two columns" style="max-width: 50px">
-    <h4 class="mt-2 mode">
+    <h1 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn"><%= theme.switch_dark %></div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden><%= theme.switch_light %></div>
       <script >
@@ -22,13 +22,26 @@
           document.body.classList.toggle("darkmode");
         }
       </script>
-    </h4>
+    </h1>
   </div>
 
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #<%= theme.tcolor %>;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.0) 50%, #<%= theme.tcolor %> 50%);
+  }
+  blockquote {
+    border-left: 8px solid #<%= theme.tcolor %>;
+  }
+  .nanobar .bar {
+    background: #<%= theme.tcolor %>;
+  }
+  </style>
+
   <div class="six columns ml-1" style="max-width: 200px">
-    <h4 class="mt-2">
+    <h1 class="mt-2">
       <%= theme.title %>
-    </h4>
+    </h1>
   </div>
 
   <div class="twelve columns">

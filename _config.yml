@@ -16,13 +16,18 @@ menu:
 #index/main page max show posts (in number)
 max_post: 4
 
+# Colors use hex color without #
+# Theme color
+tcolor: 0FA0CE
+
 # social profile at the footer/bottom
 footer: true
 placename: Earth
 placelink: https://en.wikipedia.org/wiki/Earth
-github: 
-instagram: 
-twitter: 
+github: https://github.com/adisaktijrs
+linkedin: https://linkedin.com/in/adisaktijrs
+twitter: https://twitter.com/adisaktijrs
+instagram: https://instagram.com/adisaktijrs
 
 # Misc
 nanobar: /js/nanobar.min.js
