@@ -151,10 +151,6 @@ a.footer-link:focus {
 
 }
 
-.github, .linkedin, .twitter, .instagram {
-  width: 18px;
-}
-
 .github {
   fill: #63636F;
 }
