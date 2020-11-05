@@ -51,6 +51,9 @@
         <% for (name in theme.menu) { %>
           <a href="<%- url_for(theme.menu[name]) %>" class="ml link"><%- name %></a>
         <% } %>
+        <% if (theme.email) { %>
+          <a href="mailto:<%= theme.email %>" target="_blank" class="ml">email</a>
+        <% } %>
       </div>
     </div>
     <hr style="margin-bottom: 2.6rem">
