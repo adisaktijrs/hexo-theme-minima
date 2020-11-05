@@ -29,8 +29,8 @@
   <title><%= title %></title>
   <% if (config.sitemap.rel) { %>
   <link rel="sitemap" href="<%-config.url + config.sitemap.path %>" />
-  <link rel="canonical" href="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>">
   <% } %>
+  <link rel="canonical" href="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>">
   <% if (is_page()){ %>
   <meta name="description" content="<%= page.description %>">
   <% } else if (page.content){ %>
