@@ -95,7 +95,7 @@ img {
 .about {
   width: 150px;
   height: 150px;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 /* blockquote */
@@ -204,6 +204,14 @@ body {
   display: none;
 }
 
+#comments {
+  text-align: center;
+}
+
+#madewith {
+  text-align: center;
+}
+
 .posisi {
   text-align: center;
 }
@@ -215,5 +223,12 @@ body {
     text-align: right;
   }
 
+  #comments {
+    text-align: left;
+  }
+
+  #madewith {
+    text-align: left;
+  }
 
 }
