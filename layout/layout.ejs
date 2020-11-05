@@ -27,7 +27,7 @@
   }
   %>
   <title><%= title %></title>
-  <% if (config.sitemap.rel) { %>
+  <% if (config.sitemap) { %>
   <link rel="sitemap" href="<%-config.url + config.sitemap.path %>" />
   <% } %>
   <link rel="canonical" href="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>">
