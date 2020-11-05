@@ -541,7 +541,7 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
-pre,
+/* pre,
 blockquote,
 dl,
 figure,
@@ -551,7 +551,7 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem;
-}
+} */
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
