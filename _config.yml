@@ -18,16 +18,16 @@ max_post: 4
 
 # social profile at the footer/bottom
 footer: true
-placename: 
-placelink: 
+placename: Earth
+placelink: https://en.wikipedia.org/wiki/Earth
 github: 
 instagram: 
 twitter: 
 
 # Misc
-nanobar: js/nanobar.min.js
+nanobar: /js/nanobar.min.js
 switch_light: ☀️
-switch_dard: 🌕
+switch_dark: 🌑
 
 # favicon
 favicon: /images/favicon.png
