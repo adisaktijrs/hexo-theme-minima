@@ -133,10 +133,14 @@ blockquote footer cite:before {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  background: rgb(128 128 128 / 80%);
+  background: rgb(128 128 128 / 70%);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(128 128 128 / 20%);
+}
+
+::-webkit-scrollbar-thumb:active { 
+  background-color: rgb(128 128 128 / 100%);
 }
 
 /* Footer */
