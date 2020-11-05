@@ -35,13 +35,15 @@
   <% } else { %>
   <meta name="description" content="<%= config.description %>">
   <% } %>
-
-  <meta name="author" content="<%- config.author %>">
-
-  <% if (is_post()) { %>
-  <meta property="og:image" content="<%-config.url + "/" + page.path + page.thumbnail %>">
+  <% if (config.keywords) { %>
+  <meta name="keywords" content="<%= config.keywords %>">
   <% } %>
-
+  <meta name="author" content="<%- config.author %>">
+  <% if (is_post() || is_page()) { %>
+  <meta property="og:image" content="<%-config.url + page.thumbnail %>">
+  <% } else { %>
+  <meta property="og:image" content="<%-config.url + theme.thumbnail %>">
+  <% } %>
   <meta property="og:site_name" content="<%= config.title %>" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="<%= title %>" />
@@ -63,9 +65,10 @@
   <% } else { %>
   <meta name="twitter:description" content="<%= config.description %>">
   <% } %>
-
-  <% if (is_post()) { %>
-  <meta name="twitter:image" content="<%-config.url + "/" + page.path + page.thumbnail %>">
+  <% if (is_post() || is_page()) { %>
+  <meta name="twitter:image" content="<%-config.url + page.thumbnail %>">
+  <% } else { %>
+  <meta name="twitter:image" content="<%-config.url + theme.mainthumb %>">
   <% } %>
   <meta name="twitter:url" content="<%= url %>" />
 
@@ -97,7 +100,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="eight columns  offset-by-two">
+      <div>
 
         <%- partial('partial/header') %>
         <div class="trans">
@@ -109,7 +112,7 @@
     </div>
 
   </div>
-  <script src="<%- config.root + theme.nanobar %>"></script>
+  <script src="<%- theme.nanobar %>"></script>
   <script>
     var options = {
       classname: 'nanobar',
