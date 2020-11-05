@@ -137,6 +137,7 @@ blockquote footer cite:before {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(128 128 128 / 20%);
+
 }
 
 ::-webkit-scrollbar-thumb:active { 
