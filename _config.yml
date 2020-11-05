@@ -16,9 +16,12 @@ menu:
 # Index/main page max show posts (in number)
 max_post: 4
 
-# Colors for links and top nanobar, use hex color without #
-tcolor: 0FA0CE
+# Colors use hex color without #
+# Theme color
+tcolor: 0FA0CE 
+# Nanobar color
 ncolor: FF5869
+lighttheme_color: ffdee4
 
 # Social profile at the footer/bottom, default close
 footer: true
