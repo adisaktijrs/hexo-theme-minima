@@ -11,8 +11,7 @@ desc: "This is Minima, an undoubtedly simple and lightweight dark/light mode the
 
 #menu
 menu:
-  Works: /Works
-  About: /About
+  Archives: /archives
 
 #index/main page max show posts (in number)
 max_post: 4
@@ -45,4 +44,7 @@ article:
 
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
 disqus_enabled: false
-disqus_shortname: https-adisaktijrs-github-io
+disqus_shortname: 
+
+# Google Analytics ID
+google_analytics: 
