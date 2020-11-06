@@ -25,7 +25,8 @@ Minima uses vanilla JavaScript, vanilla CSS, and [EJS](https://ejs.co/). So it w
 - Fully responsive design
 - Support post, page, tags, archives, and pagination
 - SEO: post meta description and images (appears in Facebook/Twitter shared-link)
-- Dark/light mode instant switch 🌚/🌝
+- [Customizable] icon Dark/light mode instant switch 🌑/☀️
+- [Customizable] theme color
 - Code highlighting with [Prism.js](https://prismjs.com/)
 - [Disqus](https://disqus.com/) for post comments
 - Show comments section button for faster posts loading

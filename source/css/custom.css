@@ -1,7 +1,10 @@
+html {
+  overflow: auto;
+}
+
 img {
   max-width: 100%;
   animation: transitionPlay 1.1s;
-
 }
 
 .center {
@@ -92,14 +95,13 @@ img {
 .about {
   width: 150px;
   height: 150px;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 /* blockquote */
 blockquote {
   font-family: 'Inter';
   background-color: rgba(148, 148, 149, 0.08) ;
-  border-left: 8px solid #0FA0CE;
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
   font-style: italic;
@@ -131,17 +133,18 @@ blockquote footer cite:before {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  background: rgb(128 128 128 / 80%);
+  background: rgb(128 128 128 / 70%);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(128 128 128 / 20%);
+
+}
+
+::-webkit-scrollbar-thumb:active { 
+  background-color: rgb(128 128 128 / 100%);
 }
 
 /* Footer */
-a.footer-link {
-  all: initial;
-}
-
 a.footer-link:hover,
 a.footer-link:focus {
   cursor: pointer;
@@ -156,12 +159,11 @@ a.footer-link:focus {
 
 }
 
-.github, .twitter, .instagram {
-  width: 20px;
-}
-
 .github {
   fill: #63636F;
+}
+.linkedin {
+  fill: #0073b1;
 }
 .twitter {
   fill: #1DA1F2;
@@ -170,12 +172,19 @@ a.footer-link:focus {
   fill: #E4405F
 }
 
-/* Nanobar */
-.nanobar .bar {
-  background: #0FA0CE;
+.nanobar {
+  left: 0;
 }
 
 body {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   transition: all 0.3s ease-in-out;
 }
 
@@ -200,6 +209,14 @@ body {
   display: none;
 }
 
+#comments {
+  text-align: center;
+}
+
+#madewith {
+  text-align: center;
+}
+
 .posisi {
   text-align: center;
 }
@@ -211,5 +228,12 @@ body {
     text-align: right;
   }
 
+  #comments {
+    text-align: left;
+  }
+
+  #madewith {
+    text-align: left;
+  }
 
 }

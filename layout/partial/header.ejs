@@ -1,6 +1,6 @@
 <div class="row">
   <div class="two columns" style="max-width: 50px">
-    <h4 class="mt-2 mode">
+    <h1 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn"><%= theme.switch_dark %></div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden><%= theme.switch_light %></div>
       <script >
@@ -22,13 +22,13 @@
           document.body.classList.toggle("darkmode");
         }
       </script>
-    </h4>
+    </h1>
   </div>
 
   <div class="six columns ml-1" style="max-width: 200px">
-    <h4 class="mt-2">
+    <h1 class="mt-2">
       <%= theme.title %>
-    </h4>
+    </h1>
   </div>
 
   <div class="twelve columns">
@@ -37,6 +37,9 @@
         <a href="<%= config.root %>" class="link">Home</a>
         <% for (name in theme.menu) { %>
           <a href="<%- url_for(theme.menu[name]) %>" class="ml link"><%- name %></a>
+        <% } %>
+        <% if (theme.email) { %>
+          <a href="mailto:<%= theme.email %>" target="_blank" class="ml">email</a>
         <% } %>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <div class="row ">
   <div class="column">
     <!-- Main information, edit it on theme/_config.yml -->
-    <h4 class="mb-2"><%= theme.owner %></h4>
+    <h2 class="mb-2"><%= theme.owner %></h2>
     <p><%= theme.info %></p>
     <p><%= theme.desc %></p>
   </div>
 </div>
 
-<h5>Recent Posts</h5>
+<h3>Recent Posts</h3>
 
 <% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
 <div class="row">
@@ -27,4 +27,4 @@
 </div>
 <% }) %>
 
-<h6> <a href="<%= config.root %>archives">See All Posts</a></h6>
+<h4> <a href="<%= config.root %>archives">All Posts</a></h4>
