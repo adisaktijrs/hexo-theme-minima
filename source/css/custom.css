@@ -157,6 +157,12 @@ a.footer-link:focus {
 
 }
 
+.hexo {
+  fill: #03adfc;
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
+
 .github {
   fill: #63636F;
 }
