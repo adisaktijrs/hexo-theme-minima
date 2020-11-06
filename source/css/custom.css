@@ -97,6 +97,13 @@ img {
   border-radius: 50%;
 }
 
+li p code {
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  padding: 0px 2px;
+  font-size: 85%;
+}
+
 /* blockquote */
 blockquote {
   font-family: 'Inter';
