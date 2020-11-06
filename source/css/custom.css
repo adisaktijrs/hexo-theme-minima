@@ -4,6 +4,10 @@ html {
 
 img {
   max-width: 100%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1%;
 }
 
 .center {
@@ -131,14 +135,7 @@ blockquote footer cite:before {
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
   background: rgb(128 128 128 / 70%);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
