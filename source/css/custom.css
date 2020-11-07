@@ -108,6 +108,10 @@ li p code {
   font-size: 85%;
 }
 
+body.darkmode li p code {
+  background-color: rgb(65, 65, 65);
+}
+
 /* blockquote */
 blockquote {
   font-family: 'Inter';
@@ -194,6 +198,11 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
+}
+
+body.darkmode {
+  background: rgb(34, 34, 38);
+  color: rgb(230, 230, 230);
 }
 
 .trans {

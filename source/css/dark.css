@@ -1,8 +1,0 @@
-body.darkmode {
-  background: rgb(34, 34, 38);
-  color: rgb(230, 230, 230);
-}
-
-body.darkmode li p code {
-  background-color: rgb(65, 65, 65);
-}
