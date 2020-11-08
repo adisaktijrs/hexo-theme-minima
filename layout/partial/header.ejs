@@ -34,9 +34,11 @@
   <div class="twelve columns">
     <div class="row">
       <div class="nine columns left">
-        <a href="<%= config.root %>" class="link">Home</a>
+        <a href="<%= config.root %>">Home</a>
         <% for (name in theme.menu) { %>
-          <a href="<%- url_for(theme.menu[name]) %>" class="ml link"><%- name %></a>
+          <% if (theme.menu[name]) { %>
+          <a href="<%- url_for(theme.menu[name]) %>" class="ml"><%- name %></a>
+          <% } %>
         <% } %>
         <% if (theme.email) { %>
           <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>

@@ -1,3 +1,31 @@
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dm-serif-display-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'),
+       url('../fonts/dm-serif-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/dm-serif-display-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/inter-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+}
+
 html {
   overflow: auto;
 }
@@ -8,6 +36,35 @@ img {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   margin-bottom: 1%;
+}
+
+@media (min-width: 550px) {
+  /*
+  Side by side gallery
+  use with </> alignment
+  e.g.
+  [_gallery >](imgages/test.jpg)
+  */
+  img[alt~="_gallery"] {
+    max-width: 49.5%;
+  }
+
+  /* Aligned to the right */
+  img[alt$=">"] {
+    float: right;
+  }
+
+  /* Aligned to the left */
+  img[alt$="<"] {
+    float: left;
+  }
+
+  /* Centered image */
+  img[alt$="><"] {
+    display: block;
+    margin: auto;
+    float: none !important;
+  }
 }
 
 .center {
@@ -28,7 +85,7 @@ img {
 }
 
 .ml-0 {
-  margin-left: 1rem;
+  margin-left: 0.7rem;
 }
 
 .ml {
