@@ -91,6 +91,10 @@
   <%- css('css/custom.css') %>
   <%- css('css/prism-dark.css') %>
   <%- css('css/prism-line-numbers.css') %>
+  <!-- User css -->
+  <% if (theme.usercss) { %>
+  <%- css(theme.usercss) %>
+  <% } %>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
