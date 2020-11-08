@@ -41,7 +41,11 @@
           <% } %>
         <% } %>
         <% if (theme.email) { %>
-          <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>
+          <% if (typeof obfuscate === "function") { %>
+            <a href="mailto:<%- obfuscate(theme.email) %>" target="_blank" class="ml">Email</a>
+          <% } else { %>
+            <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>
+          <% } %>
         <% } %>
       </div>
     </div>
