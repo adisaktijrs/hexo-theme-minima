@@ -21,6 +21,11 @@ max_post: 4
 # Theme color
 tcolor: 0FA0CE
 
+# Define path to user css
+#(could be also located outside of theme)
+# Relative to source/ directory
+usercss: css/user.css
+
 # social profile at the footer/bottom
 footer: true
 placename: Earth

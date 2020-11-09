@@ -1,10 +1,70 @@
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dm-serif-display-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'),
+       url('../fonts/dm-serif-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/dm-serif-display-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/inter-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+}
+
 html {
   overflow: auto;
 }
 
 img {
   max-width: 100%;
-  animation: transitionPlay 1.1s;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1%;
+}
+
+@media (min-width: 550px) {
+  /*
+  Side by side gallery
+  use with </> alignment
+  e.g.
+  [_gallery >](imgages/test.jpg)
+  */
+  img[alt~="_gallery"] {
+    max-width: 49.5%;
+  }
+
+  /* Aligned to the right */
+  img[alt$=">"] {
+    float: right;
+  }
+
+  /* Aligned to the left */
+  img[alt$="<"] {
+    float: left;
+  }
+
+  /* Centered image */
+  img[alt$="><"] {
+    display: block;
+    margin: auto;
+    float: none !important;
+  }
 }
 
 .center {
@@ -25,7 +85,7 @@ img {
 }
 
 .ml-0 {
-  margin-left: 1rem;
+  margin-left: 0.7rem;
 }
 
 .ml {
@@ -33,7 +93,7 @@ img {
 }
 
 .ml-1 {
-  margin-left: 4.5rem;
+  margin-left: 5rem;
 }
 
 .bottom {
@@ -78,6 +138,13 @@ img {
   position: absolute;
   display: block;
   cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .text-center {
@@ -96,6 +163,17 @@ img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+
+li p code {
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  padding: 0px 2px;
+  font-size: 85%;
+}
+
+body.darkmode li p code {
+  background-color: rgb(65, 65, 65);
 }
 
 /* blockquote */
@@ -125,19 +203,11 @@ blockquote footer cite:before {
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
   background: rgb(128 128 128 / 70%);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(128 128 128 / 20%);
-
 }
 
 ::-webkit-scrollbar-thumb:active { 
@@ -157,6 +227,12 @@ a.footer-link:focus {
   transform: translateY(-3px);
   transition: all .2s ease-in-out;
 
+}
+
+.hexo {
+  fill: #03adfc;
+  vertical-align: middle;
+  padding-bottom: 4px;
 }
 
 .github {
@@ -188,10 +264,14 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+body.darkmode {
+  background: rgb(34, 34, 38);
+  color: rgb(230, 230, 230);
+}
+
 .trans {
   animation: transitionPlay 0.7s;
 }
-
 
 @keyframes transitionPlay {
   from {
