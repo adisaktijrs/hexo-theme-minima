@@ -37,5 +37,8 @@ See the quick start instruction and [documentation here](https://adisaktijrs.git
 ## Development
 Everyone is welcome to contribute! Go ahead, fork and make pull request 😁
 
+## Credit
+Big thanks to [@pduchnovsky](https://github.com/pduchnovsky) and [yukimuon](https://github.com/yukimuon) to help me making this theme even better!
+
 ## Licence
 Minima is released under [MIT License](https://github.com/adisaktijrs/hexo-theme-minima/blob/master/LICENSE). Copyright © 2020 Adi Sakti Jrs

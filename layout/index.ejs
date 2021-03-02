@@ -16,7 +16,7 @@
     <p class="bottom"><%- full_date(post.date, 'll') %></p>
   </div>
   <div class="nine columns left mb-3">
-    <a href="<%- url_for(post.path) %>" class="">
+    <a href="<%- url_for(post.path) %>" >
       <% if (post.title == "") { %>
         no title
       <% } else { %>
