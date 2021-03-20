@@ -10,6 +10,8 @@
        url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
+  
+  font-display: swap; /* Add font-display */
 }
 
 /* inter-regular - latin */
@@ -24,6 +26,8 @@
        url('../fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+  
+  font-display: swap; /* Add font-display */
 }
 
 html {
@@ -300,8 +304,6 @@ body.darkmode {
 .posisi {
   text-align: center;
 }
-
-
 
 @media (min-width: 550px) {
   .posisi {
