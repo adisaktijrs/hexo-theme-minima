@@ -10,7 +10,7 @@
        url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
-  
+
   font-display: swap; /* Add font-display */
 }
 
@@ -26,7 +26,7 @@
        url('../fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
-  
+
   font-display: swap; /* Add font-display */
 }
 
@@ -214,7 +214,7 @@ blockquote footer cite:before {
   background: rgb(128 128 128 / 20%);
 }
 
-::-webkit-scrollbar-thumb:active { 
+::-webkit-scrollbar-thumb:active {
   background-color: rgb(128 128 128 / 100%);
 }
 
@@ -251,7 +251,9 @@ a.footer-link:focus {
 .instagram {
   fill: #E4405F
 }
-
+.stackoverflow {
+  fill: #ca7516;
+}
 .nanobar {
   left: 0;
 }
