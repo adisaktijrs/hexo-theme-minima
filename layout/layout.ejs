@@ -126,6 +126,9 @@
 
   </div>
   <script src="<%- theme.nanobar %>"></script>
+  <% if (theme.picjs) { %>
+  <script src="<%- theme.picjs %>"></script>
+  <% } %>
   <script>
     var options = {
       classname: 'nanobar',
