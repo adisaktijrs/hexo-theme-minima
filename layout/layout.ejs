@@ -121,7 +121,7 @@
   <% } %>
 
   <% if(config.search){ %>
-  <script src="/js/search.js" defer></script>
+  <script src="/js/search.min.js" defer></script>
   <% } %>
 
 </head>
@@ -134,8 +134,9 @@
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>
-          <%- partial('partial/footer') %>
         </div>
+        <%- partial('partial/search') %>
+        <%- partial('partial/footer') %>
       </div>
 
     </div>
