@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= config.language %>">
 
 <head>
 
@@ -43,9 +43,13 @@
   <% } %>
   <meta name="author" content="<%- config.author %>">
   <% if (is_post() || is_page()) { %>
+  <% if(page.thumbnail){ %>
   <meta property="og:image" content="<%-config.url + page.thumbnail %>">
+  <% } %>
   <% } else { %>
+  <% if(theme.thumbnail){ %>
   <meta property="og:image" content="<%-config.url + theme.thumbnail %>">
+  <% } %>
   <% } %>
   <meta property="og:site_name" content="<%= config.title %>" />
   <meta property="og:type" content="article" />
@@ -69,9 +73,13 @@
   <meta name="twitter:description" content="<%= config.description %>">
   <% } %>
   <% if (is_post() || is_page()) { %>
+  <% if(page.thumbnail){ %>
   <meta name="twitter:image" content="<%-config.url + page.thumbnail %>">
+  <% } %>
   <% } else { %>
+  <% if(theme.thumbnail){ %>
   <meta name="twitter:image" content="<%-config.url + theme.thumbnail %>">
+  <% } %>
   <% } %>
   <meta name="twitter:url" content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
 
@@ -108,6 +116,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <%- partial('partial/google_analytics') %>
 
+  <% if (theme.picjs) { %>
+  <script src="<%- theme.picjs %>" defer></script>
+  <% } %>
+
+  <% if(config.search){ %>
+  <script src="/js/search.min.js" defer></script>
+  <% } %>
+
 </head>
 
 <body>
@@ -118,17 +134,16 @@
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>
-          <%- partial('partial/footer') %>
         </div>
+        <%- partial('partial/search') %>
+        <%- partial('partial/footer') %>
       </div>
 
     </div>
 
   </div>
   <script src="<%- theme.nanobar %>"></script>
-  <% if (theme.picjs) { %>
-  <script src="<%- theme.picjs %>"></script>
-  <% } %>
+
   <script>
     var options = {
       classname: 'nanobar',
