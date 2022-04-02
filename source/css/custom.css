@@ -169,14 +169,14 @@ img {
   border-radius: 50%;
 }
 
-li p code {
+code:not(pre code) {
   background-color: rgb(230, 230, 230);
   border-radius: 5px;
   padding: 0px 2px;
   font-size: 85%;
 }
 
-body.darkmode li p code {
+body.darkmode code:not(pre code) {
   background-color: rgb(65, 65, 65);
 }
 
