@@ -120,6 +120,8 @@
   <script src="<%- theme.picjs %>" defer></script>
   <% } %>
 
+  <!-- Search
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <% if(config.search){ %>
   <script src="/js/search.min.js" defer></script>
   <% } %>
@@ -135,7 +137,6 @@
         <div class="trans">
           <%- body %>
         </div>
-        <%- partial('partial/search') %>
         <%- partial('partial/footer') %>
       </div>
 
