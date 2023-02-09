@@ -104,6 +104,10 @@
   <%- css(theme.usercss) %>
   <% } %>
 
+  <% if (theme.katex.enable && (is_page() || is_post())) { %>
+  <%- css('css/katex.min.css') %>
+  <% } %>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="<%- theme.favicon %>">
@@ -124,13 +128,17 @@
   <script src="/js/search.min.js" defer></script>
   <% } %>
 
+  <% if (theme.katex.enable && (is_page() || is_post())) { %>
+  <script src="/js/katex.min.js" defer></script>
+  <script src="/js/auto-render.min.js" defer onload="renderMathInElement(document.body);"></script>
+  <% } %>
+
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div>
-
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>

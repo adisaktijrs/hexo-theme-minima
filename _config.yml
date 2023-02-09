@@ -11,8 +11,8 @@ desc: "This is Minima, an undoubtedly simple and lightweight dark/light mode the
 
 #menu
 menu:
-  Works: /Works
-  About: /About
+    Works: /Works
+    About: /About
 
 #index/main page max show posts (in number)
 max_post: 4
@@ -44,13 +44,17 @@ switch_dark: 🌑
 # Picture enlargement
 picjs: /js/pic.min.js
 
+# Katex
+katex:
+    enable: true
+
 # favicon
 favicon: /images/favicon.png
 # thumbnail
 thumbnail: /images/thumbnail.jpg
 
 article:
-  thumbnail: true
+    thumbnail: true
 
 # DISQUS comments (sign up to Disqus to get disqus_shortname)
 disqus_enabled: false
