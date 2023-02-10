@@ -47,6 +47,10 @@ picjs: /js/pic.min.js
 # Katex
 katex:
     enable: true
+    keys:
+    # keys is two dimensional array, the first element of ont dimensional array if left signal, the second is right signal
+        - ["$$", "$$"]
+        - ["\\\\[", "\\\\]"]
 
 # favicon
 favicon: /images/favicon.png

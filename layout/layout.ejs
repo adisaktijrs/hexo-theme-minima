@@ -130,7 +130,25 @@
 
   <% if (theme.katex.enable && (is_page() || is_post())) { %>
   <script src="/js/katex.min.js" defer></script>
-  <script src="/js/auto-render.min.js" defer onload="renderMathInElement(document.body);"></script>
+  <script src="/js/auto-render.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          <% for (const key in theme.katex.keys) { %> {
+            left: '<%- theme.katex.keys[key][0] %>',
+            right: '<%- theme.katex.keys[key][1] %>',
+            display: true,
+          },
+          <%  } %>
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    })
+  </script>
   <% } %>
 
 </head>
